@@ -11,8 +11,10 @@ export default function BasketPage() {
 
   if (!basket) return <Typography variant="h3">Your basket is empty</Typography>
 
+
   return (
     <>
+    
      <BasketTable items={basket.items}/>
       <Grid container>
         <Grid item xs={6} />

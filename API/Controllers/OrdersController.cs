@@ -10,6 +10,7 @@ using API.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 
 namespace API.Controllers
 {
@@ -33,7 +34,7 @@ namespace API.Controllers
             .ToListAsync();
         }
 
-        [HttpGet("id",Name ="GetOrder")]
+        [HttpGet("id", Name = "GetOrder")]
         public async Task<ActionResult<OrderDto>> GetOrder(int id)
         {
             return await _context.Orders
@@ -74,15 +75,17 @@ namespace API.Controllers
             }
 
             var subTotal = items.Sum(item => item.Price * item.Quantity);
-            var deliveryFee = subTotal > 1000 ? 0 : 500;
 
+                var deliveryFee = subTotal > 1000 ? 0 : 500;
+           
             var order = new Order
             {
                 OrderItems = items,
                 BuyerId = User.Identity.Name,
                 ShippingAddress = orderDto.ShippingAddress,
                 Subtotal = subTotal,
-                DeliveryFee = deliveryFee
+                DeliveryFee = deliveryFee,
+                PaymentIntentId=basket.PaymentIntentId
             };
 
             _context.Orders.Add(order);
@@ -91,7 +94,7 @@ namespace API.Controllers
             if (orderDto.SaveAddress)
             {
                 var user = await _context.Users
-                .Include(a=>a.Address)
+                .Include(a => a.Address)
                 .FirstOrDefaultAsync(x => x.UserName == User.Identity.Name);
                 var address = new UserAddress
                 {
@@ -103,12 +106,12 @@ namespace API.Controllers
                     Zip = orderDto.ShippingAddress.Zip,
                     Country = orderDto.ShippingAddress.Country,
                 };
-                user.Address=address;
+                user.Address = address;
             }
 
             var result = await _context.SaveChangesAsync() > 0;
 
-            if(result) return CreatedAtRoute("GetOrder",new {id=order.Id},order.Id);
+            if (result) return CreatedAtRoute("GetOrder", new { id = order.Id }, order.Id);
 
             return BadRequest("Problem creating order");
 
