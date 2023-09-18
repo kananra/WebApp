@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace API.Data.Migrations
+namespace API.Migrations
 {
     /// <inheritdoc />
-    public partial class OrderEntityAdded : Migration
+    public partial class IdentityAdded : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -75,8 +75,8 @@ namespace API.Data.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     BuyerId = table.Column<string>(type: "TEXT", nullable: true),
                     ShippingAddress_FullName = table.Column<string>(type: "TEXT", nullable: true),
-                    ShippingAddress_Adress1 = table.Column<string>(type: "TEXT", nullable: true),
-                    ShippingAddress_Adress2 = table.Column<string>(type: "TEXT", nullable: true),
+                    ShippingAddress_Address1 = table.Column<string>(type: "TEXT", nullable: true),
+                    ShippingAddress_Address2 = table.Column<string>(type: "TEXT", nullable: true),
                     ShippingAddress_City = table.Column<string>(type: "TEXT", nullable: true),
                     ShippingAddress_State = table.Column<string>(type: "TEXT", nullable: true),
                     ShippingAddress_Zip = table.Column<string>(type: "TEXT", nullable: true),
@@ -222,8 +222,8 @@ namespace API.Data.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false),
                     FullName = table.Column<string>(type: "TEXT", nullable: true),
-                    Adress1 = table.Column<string>(type: "TEXT", nullable: true),
-                    Adress2 = table.Column<string>(type: "TEXT", nullable: true),
+                    Address1 = table.Column<string>(type: "TEXT", nullable: true),
+                    Address2 = table.Column<string>(type: "TEXT", nullable: true),
                     City = table.Column<string>(type: "TEXT", nullable: true),
                     State = table.Column<string>(type: "TEXT", nullable: true),
                     Zip = table.Column<string>(type: "TEXT", nullable: true),

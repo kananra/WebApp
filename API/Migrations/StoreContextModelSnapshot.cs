@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace API.Data.Migrations
+namespace API.Migrations
 {
     [DbContext(typeof(StoreContext))]
     partial class StoreContextModelSnapshot : ModelSnapshot
@@ -246,10 +246,10 @@ namespace API.Data.Migrations
                     b.Property<int>("Id")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Adress1")
+                    b.Property<string>("Address1")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Adress2")
+                    b.Property<string>("Address2")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("City")
@@ -397,10 +397,10 @@ namespace API.Data.Migrations
                             b1.Property<int>("OrderId")
                                 .HasColumnType("INTEGER");
 
-                            b1.Property<string>("Adress1")
+                            b1.Property<string>("Address1")
                                 .HasColumnType("TEXT");
 
-                            b1.Property<string>("Adress2")
+                            b1.Property<string>("Address2")
                                 .HasColumnType("TEXT");
 
                             b1.Property<string>("City")
