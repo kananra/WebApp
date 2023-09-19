@@ -1,7 +1,7 @@
 name: docker-push
 
 on:
-workflow_dispatch:
+  workflow_dispatch:
   push:
     branches:
       - 'main'
@@ -25,9 +25,9 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-        context: "{{defaultContext}}:API"
-          push: true 
-          tags: kenanra/webapp:latest
+         context: "{{defaultContext}}:API"
+         push: true 
+         tags: kenanra/webapp:latest
   deploy:
     needs: docker
     name: Deploy app
