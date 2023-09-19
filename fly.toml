@@ -1,0 +1,22 @@
+# fly.toml app configuration file generated for ewebapp on 2023-09-19T00:30:56+04:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "ewebapp"
+primary_region = "otp"
+
+[build]
+  image = "kenanra/webapp:latest"
+
+[env]
+  ASPNETCORE_URLS="http://+:8080"
+  StripeSettings__PublishableKey="pk_test_51NreIEFfhkJ5CGqI0hsOKM181flGRBaoN30D4JU7Ipg0HSbW11HCrwNget5BmMR4xychVGXxK1Aj07alFYuAveVw00SquEqefk"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
