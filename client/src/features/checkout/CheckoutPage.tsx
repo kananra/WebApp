@@ -58,7 +58,7 @@ export default function CheckoutPage() {
 
   const methods = useForm({
     mode: 'onTouched',
-    resolver: yupResolver(currentvalidationSchema)
+    resolver: yupResolver<any>(currentvalidationSchema)
   });
 
   useEffect(() => {
