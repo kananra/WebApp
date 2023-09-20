@@ -1,33 +1,30 @@
-import { Box, Typography } from "@mui/material";
-import Slider from "react-slick";
 
-export default function HomePage(){
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      };
-    return (
-       <>
-       <Slider {...settings}>
-         <div>
-            <img src="/images/hero1.jpg" alt="hero" style={{display:'block',width:'100%',maxHeight:500}} />
-         </div>
-         <div>
-            <img src="/images/hero2.jpg" alt="hero" style={{display:'block',width:'100%',maxHeight:500}} />
-         </div>
-         <div>
-            <img src="/images/hero3.jpg" alt="hero" style={{display:'block',width:'100%',maxHeight:500}} />
-         </div>
-       </Slider>
+import Carousel from 'react-bootstrap/Carousel';
+import OurProducts from './OurProducts';
 
-       <Box display='flex' justifyContent='center' sx={{p:4}}>
-         <Typography variant="h1">
-            Welcome to the shop!
-         </Typography>
-       </Box>
-       </>
-    )
+
+function UncontrolledExample() {
+  return (
+    <>
+      <Carousel fade>
+      <Carousel.Item>
+      <img src="/images/fwebp.webp" alt="hero" style={{display:'block',width:'100%',maxHeight:650}} />
+        
+      </Carousel.Item>
+      <Carousel.Item>
+      <img src="/images/fwebp1.webp" alt="hero" style={{display:'block',width:'100%',maxHeight:650}} />
+       
+      </Carousel.Item>
+      <Carousel.Item>
+      <img src="/images/fwebp2.webp" alt="hero" style={{display:'block',width:'100%',maxHeight:650}} />
+       
+      </Carousel.Item>
+    </Carousel>
+
+    <OurProducts/>
+    </>
+  
+  );
 }
+
+export default UncontrolledExample;
