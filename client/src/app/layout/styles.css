@@ -1,0 +1,48 @@
+.cardZoom:hover {
+  transform: scale(1.2);
+}
+
+.cardStoriesTop {
+  height: 100%;
+  max-width: 100%;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.cardStoriesBottom {
+  height: 100%;
+  max-width: 100%;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.newsHover:hover {
+  color: #e30017;
+}
+
+.overflowText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pictureText {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  background-color: inherit;
+  color: white;
+  width: 550px;
+}
+
+@media (max-width: 767px) {
+    .pictureText {
+        position: relative; 
+        top: auto;
+        left: auto;
+        transform: none;
+        text-align: center; 
+        color:inherit;
+    }
+}
