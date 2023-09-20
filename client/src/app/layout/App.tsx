@@ -35,6 +35,7 @@ function App() {
   const paletteType = darkMode ? 'dark' : 'light'
   const theme = createTheme({
     palette: {
+      
       mode: paletteType,
       background: {
         default: paletteType === 'light' ? '#eaeaea' : '#121212'
@@ -51,14 +52,13 @@ function App() {
     <ThemeProvider theme={theme}>
       <ToastContainer position='bottom-right' hideProgressBar theme='colored' />
       <CssBaseline />
-      <Header darkMode={darkMode} handleThemeChange={handleThemeChange} />
+      <Header darkMode={darkMode} handleThemeChange={handleThemeChange}  />
       {loading ? <LoadingComponent message='Initialising app...' />
         : location.pathname === '/' ? <HomePage />
           : <Container sx={{mt:4}}>
             <Outlet />
           </Container>
       }
-
     </ThemeProvider>
   );
 }
