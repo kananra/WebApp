@@ -1,5 +1,5 @@
 import { Box, Grid, Typography } from "@mui/material";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function JoinRepublic() {
   return (
@@ -9,9 +9,9 @@ export default function JoinRepublic() {
           <img
             src="/images/republic.jpeg"
             alt="asus"
-            style={{ maxWidth: "100%", height: "auto" }}
+            style={{ maxWidth: "100%", height: "100%" }}
           />
-          <Box>
+          <Box component={Link} to='https://rog.asus.com/rog-saga/'> 
             <Typography className="pictureText" variant="h4">
                 THE ART OF THE ROG UNIVERSE
                  <Typography >

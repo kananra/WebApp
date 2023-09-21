@@ -39,7 +39,7 @@ function UncontrolledExample() {
       <div style={{ marginBottom: "50px"}}>
         <RogInAction />
       </div>
-      <div style={{ marginBottom: "100px"}}>
+      <div>
         <JoinRepublic />
       </div>
     </>

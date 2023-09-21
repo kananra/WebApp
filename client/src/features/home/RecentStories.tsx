@@ -22,13 +22,31 @@ export default function RecentStories() {
           sx={{ mb: 3, px: 4, maxWidth: "100%" }}
           columns={{ xs: 4, sm: 8, md: 12 }}
         >
-          <Grid item xs={4} component={Link} to="/" sx={{ overflow: "hidden", height: 550 }}>
+          <Grid
+            item
+            xs={4}
+            component={Link}
+            to="https://rog.asus.com/articles/gaming-graphics-cards/the-rog-matrix-geforce-rtx-4090-sets-eight-overclocking-records-and-you-can-get-yours-now/"
+            sx={{ overflow: "hidden", height: 550 }}
+          >
             <img src="/images/stories1.webp" alt="" className="cardZoom cardStoriesTop" />
           </Grid>
-          <Grid item xs={4} sx={{ overflow: "hidden", height: 550 }}>
+          <Grid
+            item
+            xs={4}
+            component={Link}
+            to="https://rog.asus.com/articles/rog-gaming-laptops/hands-on-the-rog-strix-scar-18-gaming-laptop-packs-a-big-screen-in-a-nimble-chassis/"
+            sx={{ overflow: "hidden", height: 550 }}
+          >
             <img src="/images/stories2.webp" alt="" className="cardZoom cardStoriesTop" />
           </Grid>
-          <Grid item xs={4} sx={{ overflow: "hidden", height: 550 }}>
+          <Grid
+            item
+            xs={4}
+            component={Link}
+            to="https://rog.asus.com/articles/hands-on/hands-on-the-rog-raikiri-pro-took-my-couch-gaming-to-the-next-level/"
+            sx={{ overflow: "hidden", height: 550 }}
+          >
             <img src="/images/stories3.webp" alt="" className="cardZoom cardStoriesTop" />
           </Grid>
         </Grid>
@@ -38,10 +56,22 @@ export default function RecentStories() {
           sx={{ px: 4, maxWidth: "100%" }}
           columns={{ xs: 4, sm: 8, md: 12 }}
         >
-          <Grid item xs={6} sx={{ overflow: "hidden", height: 550 }}>
+          <Grid
+            item
+            xs={6}
+            component={Link}
+            to="https://rog.asus.com/articles/maximus-motherboards/new-z790-motherboards-from-rog-pave-the-way-for-next-gen-intel-core-cpus/"
+            sx={{ overflow: "hidden", height: 550 }}
+          >
             <img src="/images/stories4.webp" alt="" className="cardZoom cardStoriesBottom" />
           </Grid>
-          <Grid item xs={6} sx={{ overflow: "hidden", height: 550 }}>
+          <Grid
+            item
+            xs={6}
+            component={Link}
+            to="https://rog.asus.com/articles/gaming-monitors/ultrawide-and-ultrafast-meet-the-rog-swift-oled-pg34wcdm/"
+            sx={{ overflow: "hidden", height: 550 }}
+          >
             <img src="/images/stories5.webp" alt="" className="cardZoom cardStoriesBottom" />
           </Grid>
         </Grid>
@@ -52,9 +82,9 @@ export default function RecentStories() {
             variant="h5"
             textAlign="center"
             fontWeight="500"
-            sx={{ p: 5, color: "red",textDecoration:'none' }}
+            sx={{ p: 5, color: "red", textDecoration: "none" }}
           >
-            <Box >
+            <Box>
               Learn more
               <ArrowForwardIosIcon />
             </Box>

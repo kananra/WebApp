@@ -36,13 +36,45 @@
   width: 550px;
 }
 
+.logoCss{
+  width: 24px;
+  height: 24px;
+  margin-right: 50px;
+  color: white;
+ 
+}
+
+
+
+.glologo{
+  width: 24px;
+  height: 24px;
+}
+
+
 @media (max-width: 767px) {
     .pictureText {
         position: relative; 
-        top: auto;
+        top: -280px;
         left: auto;
         transform: none;
         text-align: center; 
-        color:inherit;
+        color:white;
     }
+     
+    .reslogo{
+     position: relative;
+     top: 20px;
+    }
+
+    .logoCss{
+      margin-bottom: 20px;
+    }
+    
+    .resglo{
+      display: inline-block;
+      width: 100%;
+    }
+    
+  
 }
