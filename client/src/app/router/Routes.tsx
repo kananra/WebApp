@@ -14,6 +14,7 @@ import Orders from "../../features/orders/Orders";
 import CheckoutWrapper from "../../features/checkout/CheckoutWrapper";
 import Inventory from "../../features/admin/Inventory";
 
+
 export const router=createBrowserRouter([
     {
         path:'/',

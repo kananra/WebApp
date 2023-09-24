@@ -11,7 +11,7 @@ export default function JoinRepublic() {
             alt="asus"
             style={{ maxWidth: "100%", height: "100%" }}
           />
-          <Box component={Link} to='https://rog.asus.com/rog-saga/'> 
+          <Box component={Link} to='https://rog.asus.com/rog-saga/'  sx={{textDecoration:'none'}}> 
             <Typography className="pictureText" variant="h4">
                 THE ART OF THE ROG UNIVERSE
                  <Typography >
