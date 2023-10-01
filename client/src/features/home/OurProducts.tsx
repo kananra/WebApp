@@ -45,33 +45,33 @@ export default function OurProducts() {
         Explore Our Products
       </Typography>
       <Slider {...settings}>
-        <Grid sx={{ mx: 3, my: 3, textDecoration: "none" }} component={Link} to="https://rog.asus.com/laptops-group/">
+        <Grid sx={{ mx: 3, my: 3, textDecoration: "none",color:'inherit' }} component={Link} to="https://rog.asus.com/laptops-group/">
           <img src="images/laptops.png" alt="" />
-          <Typography variant="h6" textAlign="center" sx={{ color: "black" }}>
+          <Typography variant="h6" textAlign="center" >
             Laptops
           </Typography>
         </Grid>
-        <Grid sx={{ mx: 3, my: 3,textDecoration: "none" }} component={Link} to='https://rog.asus.com/motherboards-group/'>
+        <Grid sx={{ mx: 3, my: 3,textDecoration: "none",color:'inherit' }} component={Link} to='https://rog.asus.com/motherboards-group/'>
           <img src="images/motherboards.png" alt="" />
-          <Typography variant="h6" textAlign="center" sx={{ color: "black" }}>
+          <Typography variant="h6" textAlign="center" >
             Motherboards
           </Typography>
         </Grid>
-        <Grid sx={{ mx: 3, my: 3,textDecoration: "none" }} component={Link} to='https://rog.asus.com/graphics-cards-group/'>
+        <Grid sx={{ mx: 3, my: 3,textDecoration: "none",color:'inherit' }} component={Link} to='https://rog.asus.com/graphics-cards-group/'>
           <img src="images/graphiccards.png" alt="" />
-          <Typography variant="h6" textAlign="center" sx={{ color: "black" }}>
+          <Typography variant="h6" textAlign="center" >
             Graphics Cards
           </Typography>
         </Grid>
-        <Grid sx={{ mx: 3, my: 3,textDecoration: "none" }} component={Link} to='https://rog.asus.com/monitors-group/'>
+        <Grid sx={{ mx: 3, my: 3,textDecoration: "none",color:'inherit' }} component={Link} to='https://rog.asus.com/monitors-group/'>
           <img src="images/monitors.png" alt="" />
-          <Typography variant="h6" textAlign="center" sx={{ color: "black" }}>
+          <Typography variant="h6" textAlign="center" >
             Monitors
           </Typography>
         </Grid>
-        <Grid sx={{ mx: 3, my: 3,textDecoration: "none" }} component={Link} to='https://rog.asus.com/phones-group/allmodels'>
+        <Grid sx={{ mx: 3, my: 3,textDecoration: "none",color:'inherit' }} component={Link} to='https://rog.asus.com/phones-group/allmodels'>
           <img src="images/phones.png" alt="" />
-          <Typography variant="h6" textAlign="center" sx={{ color: "black" }}>
+          <Typography variant="h6" textAlign="center" >
             Phones
           </Typography>
         </Grid>

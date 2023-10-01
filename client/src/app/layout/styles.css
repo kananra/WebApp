@@ -10,8 +10,6 @@
   position: relative;
 }
 
-
-
 .cardStoriesBottom {
   height: 100%;
   max-width: 100%;
@@ -39,6 +37,15 @@
   width: 550px;
 }
 
+.bannerText {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-color: inherit;
+  color: white;
+  width: 550px;
+}
+
 .logoCss {
   width: 24px;
   height: 24px;
@@ -51,8 +58,11 @@
   height: 24px;
 }
 
-
-
+.css-1tyumyi-MuiContainer-root {
+  padding-left: none !important;
+  padding-right: none !important;
+  margin-top: none !important;
+}
 
 @media (max-width: 767px) {
   .pictureText {
@@ -77,4 +87,24 @@
     display: inline-block;
     width: 100%;
   }
+}
+
+@media (min-width: 1200px) {
+  .css-1tyumyi-MuiContainer-root {
+    max-width: none !important;
+  }
+}
+
+.css-1tyumyi-MuiContainer-root {
+  margin-top: 0 !important;
+}
+@media (min-width: 600px) {
+  .css-1tyumyi-MuiContainer-root {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .css-14fd9ja-MuiContainer-root {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 }
