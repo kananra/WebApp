@@ -1,4 +1,4 @@
-import { Button, Card, CardActions, CardContent, CardMedia, CardHeader, Typography, Avatar } from "@mui/material";
+import { Button, Card, CardActions, CardContent, CardMedia, CardHeader, Typography } from "@mui/material";
 import { Product } from "../../app/models/Product";
 import { Link } from "react-router-dom";
 import { LoadingButton } from "@mui/lab";
@@ -13,29 +13,30 @@ interface Props {
 export default function ProductCard({ product }: Props) {
     const {status}=useAppSelector(state=>state.basket);
     const dispatch=useAppDispatch();
-
+    const cardStyle = {
+        display: 'block',
+        width: '292px',
+        height: '390px',
+        paddingTop:'15px'
+    }
  
     return (
         <>
-            <Card>
-                <CardHeader
-                    avatar={
-                        <Avatar sx={{bgcolor:'secondary.main'}}>
-                            {product.name.charAt(0).toUpperCase()}
-                        </Avatar>
-                    }
-                    title={product.name}
-                    titleTypographyProps={{
-                        sx:{fontWeight:'bold',color:'primary.main'}
-                    }}
-                />
+            <Card style={cardStyle}>
+                
                 <CardMedia
-                    sx={{ height: 140,backgroundSize:'contain',bgcolor:'primary.light' }}
+                    sx={{ height: 160,backgroundSize:'contain' }}
                     image={product.pictureUrl}
                     title={product.name}
                 />
+                <CardHeader
+                    title={product.name}
+                    titleTypographyProps={{
+                        sx:{color:'inherit',fontSize:'15px'}
+                    }}
+                />
                 <CardContent>
-                    <Typography gutterBottom color='secondary' variant="h5">
+                    <Typography gutterBottom color='inherit' variant="h5">
                         {currencyFormat(product.price)} 
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
@@ -43,11 +44,11 @@ export default function ProductCard({ product }: Props) {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <LoadingButton 
+                    <LoadingButton sx={{border:'3px solid blue',backgroundColor:'inherit',color:'inherit',borderRadius:'10px',marginRight:'5px'}} 
                     loading={status==='pendingAddItem'+product.id} 
                     onClick={()=>dispatch(addBasketItemAsync({productId:product.id}))} 
                     size="small">Add to Cart</LoadingButton>
-                    <Button component={Link} to={`/catalog/${product.id}`} size="small">View</Button>
+                    <Button component={Link} to={`/catalog/${product.id}`} size="small" sx={{border:'3px solid blue',backgroundColor:'inherit',color:'inherit',borderRadius:'10px'}} >View</Button>
                 </CardActions>
             </Card>
         </>

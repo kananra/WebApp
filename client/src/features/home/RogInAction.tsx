@@ -20,7 +20,7 @@ export default function RogInAction() {
           className="newsHover"
           component={NavLink}
           to="https://rog.asus.com/articles/gaming/the-best-rog-ally-games-to-play-in-short-bursts/"
-          sx={{ textDecoration: "none", color: "black" }}
+          sx={{ textDecoration: "none", color:'inherit' }}
         >
           <Card sx={{ maxWidth: 500 }}>
             <CardActionArea>
@@ -56,7 +56,7 @@ export default function RogInAction() {
           className="newsHover"
           component={NavLink}
           to="https://rog.asus.com/articles/gaming/the-best-rog-ally-games-to-play-in-short-bursts/"
-          sx={{ textDecoration: "none", color: "black" }}
+          sx={{ textDecoration: "none", color:'inherit' }}
         >
           <Card sx={{ maxWidth: 500 }}>
             <CardActionArea>
@@ -92,7 +92,7 @@ export default function RogInAction() {
           className="newsHover"
           component={NavLink}
           to="https://rog.asus.com/articles/gaming/the-best-rog-ally-games-to-play-in-short-bursts/"
-          sx={{ textDecoration: "none", color: "black" }}
+          sx={{ textDecoration: "none",color:'inherit'  }}
         >
           <Card sx={{ maxWidth: 500 }}>
             <CardActionArea>
@@ -117,7 +117,7 @@ export default function RogInAction() {
           <Typography className="overflowText" variant="h6">
             The best retro and retro revival games for the ROG Ally
           </Typography>
-          <Typography className="overflowText" variant="subtitle1" sx={{ maxWidth: "500px" }}>
+          <Typography className="overflowText" variant="subtitle1" sx={{ maxWidth: "500px"}}>
             The ROG Ally can play modern AAA games with excellent fidelity and performance, but
             sometimes you just want a blast from the past.
           </Typography>

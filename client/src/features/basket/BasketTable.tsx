@@ -15,8 +15,8 @@ export default function BasketTable({items,isBasket=true}:Props){
     const { status } = useAppSelector(state => state.basket);
     const dispatch = useAppDispatch();
     return (
-        <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 650 }}>
+        <TableContainer component={Paper} >
+        <Table sx={{ minWidth: 200}}>
           <TableHead>
             <TableRow>
               <TableCell>Product</TableCell>
@@ -60,7 +60,7 @@ export default function BasketTable({items,isBasket=true}:Props){
                     onClick={() => dispatch(addBasketItemAsync({
                        productId: item.productId 
                       }))}
-                    color='secondary'>
+                    sx={{color:'blue'}}>
                     <Add />
                   </LoadingButton>}
 

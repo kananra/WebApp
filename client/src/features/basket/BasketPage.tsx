@@ -14,17 +14,19 @@ export default function BasketPage() {
 
   return (
     <>
+    
      <BasketTable items={basket.items}/>
-      <Grid container>
+      <Grid container sx={{marginBottom:'200px' }}>
         <Grid item xs={6} />
         <Grid item xs={6}>
           <BasketSummary />
           <Button
             component={Link}
             to='/checkout'
-            variant="contained"
+            variant="outlined"
             size="large"
             fullWidth
+            sx={{color:'inherit',backgroundColor:'inherit',border:'2px solid blue'}}
           >
             Checkout
           </Button>

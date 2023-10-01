@@ -1,4 +1,5 @@
 import { Grid, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 
 export default function OurProducts() {
@@ -39,28 +40,42 @@ export default function OurProducts() {
   };
 
   return (
- 
-      <div style={{ maxWidth: "1450px", margin: "0 auto", }}>
-        <Typography variant="h2" textAlign="center" fontWeight="500" sx={{ mt: 4, mb: 4 }}>
-          Explore Our Products
-        </Typography>
-        <Slider {...settings}>
-          <Grid sx={{ mx: 3,my:3 }}>
-            <img src="images/laptops.png" alt="" />
-          </Grid>
-          <Grid sx={{ mx: 3,my:3 }}>
-            <img src="images/motherboards.png" alt="" />
-          </Grid>
-          <Grid sx={{ mx: 3,my:3 }}>
-            <img src="images/graphiccards.png" alt="" />
-          </Grid>
-          <Grid sx={{ mx: 3,my:3 }}>
-            <img src="images/monitors.png" alt="" />
-          </Grid>
-          <Grid sx={{ mx: 3,my:3 }}>
-            <img src="images/phones.png" alt="" />
-          </Grid>
-        </Slider>
-      </div>
+    <div style={{ maxWidth: "1450px", margin: "0 auto" }}>
+      <Typography variant="h2" textAlign="center" fontWeight="500" sx={{ mt: 4, mb: 4 }}>
+        Explore Our Products
+      </Typography>
+      <Slider {...settings}>
+        <Grid sx={{ mx: 3, my: 3, textDecoration: "none",color:'inherit' }} component={Link} to="https://rog.asus.com/laptops-group/">
+          <img src="images/laptops.png" alt="" />
+          <Typography variant="h6" textAlign="center" >
+            Laptops
+          </Typography>
+        </Grid>
+        <Grid sx={{ mx: 3, my: 3,textDecoration: "none",color:'inherit' }} component={Link} to='https://rog.asus.com/motherboards-group/'>
+          <img src="images/motherboards.png" alt="" />
+          <Typography variant="h6" textAlign="center" >
+            Motherboards
+          </Typography>
+        </Grid>
+        <Grid sx={{ mx: 3, my: 3,textDecoration: "none",color:'inherit' }} component={Link} to='https://rog.asus.com/graphics-cards-group/'>
+          <img src="images/graphiccards.png" alt="" />
+          <Typography variant="h6" textAlign="center" >
+            Graphics Cards
+          </Typography>
+        </Grid>
+        <Grid sx={{ mx: 3, my: 3,textDecoration: "none",color:'inherit' }} component={Link} to='https://rog.asus.com/monitors-group/'>
+          <img src="images/monitors.png" alt="" />
+          <Typography variant="h6" textAlign="center" >
+            Monitors
+          </Typography>
+        </Grid>
+        <Grid sx={{ mx: 3, my: 3,textDecoration: "none",color:'inherit' }} component={Link} to='https://rog.asus.com/phones-group/allmodels'>
+          <img src="images/phones.png" alt="" />
+          <Typography variant="h6" textAlign="center" >
+            Phones
+          </Typography>
+        </Grid>
+      </Slider>
+    </div>
   );
 }

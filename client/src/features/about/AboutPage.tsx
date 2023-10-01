@@ -1,39 +1,31 @@
-import { Alert, AlertTitle, Button, ButtonGroup, Container, List, ListItem, ListItemText, Typography } from "@mui/material";
-import agent from "../../app/api/agent";
-import { useState } from "react";
+import { Box, Container, Grid, Typography } from "@mui/material";
 
 export default function AboutPage() {
-    const [validationErrors, setValidationErrors] = useState<string[]>([]);
-
-    function getValidationError() {
-        agent.TestErrors.getValidationError()
-            .then(() => console.log('should not see this'))
-            .catch(error => setValidationErrors(error));
-
-    }
-
-    return (
-        <Container>
-            <Typography gutterBottom variant="h2">Errors for testing purposes </Typography>
-            <ButtonGroup fullWidth>
-                <Button variant="contained" onClick={() => agent.TestErrors.get400Error()}>Test 400 Error</Button>
-                <Button variant="contained" onClick={() => agent.TestErrors.get401Error()}>Test 401 Error</Button>
-                <Button variant="contained" onClick={() => agent.TestErrors.get404Error().catch(error => console.log(error))}>Test 404 Error</Button>
-                <Button variant="contained" onClick={() => agent.TestErrors.get500Error()}>Test 500 Error</Button>
-                <Button variant="contained" onClick={getValidationError}>Test Validaion Error</Button>
-            </ButtonGroup>
-            {validationErrors.length > 0 &&
-                <Alert severity="error">
-                    <AlertTitle>Validation Errors</AlertTitle>
-                    <List>
-                        {validationErrors.map(error => (
-                            <ListItem key={error}>
-                                <ListItemText>{error}</ListItemText>
-                            </ListItem>
-                        ))}
-                    </List>
-                </Alert>
-            }
-        </Container>
-    )
+  return (
+    <Container maxWidth={false} sx={{ maxWidth: "2560px" }}>
+      <Grid
+        sx={{
+          backgroundImage: 'url( "/images/kv_banner.jpg")',
+          height: "550px",
+          px: 5,
+          width: "100%",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          position: "relative",
+        }}
+      >
+        <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+          <Typography className="bannerText" variant="h3" textAlign={"center"}>
+            ABOUT ASUS
+            <Typography>
+              ASUS is passionate about technology and driven by innovation. We dream, we dare and we
+              strive to create an effortless and joyful digital life for everyone. We're always in
+              search of incredible ideas and experiences, and we aspire to deliver the incredible in
+              everything we do.
+            </Typography>
+          </Typography>
+        </Box>
+      </Grid>
+    </Container>
+  );
 }

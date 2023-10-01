@@ -25,7 +25,7 @@ export default function Catalog() {
     if (!filtersLoaded ) return <LoadingComponent message="Loading products..." />
 
     return (
-        <Grid container columnSpacing={4}>
+        <Grid container item columnSpacing={4} sx={{px:'150px',mt:8}} >
             <Grid item xs={3}>
                 <Paper sx={{ mb: 2 }}>
                     <ProductSearch />
@@ -52,7 +52,7 @@ export default function Catalog() {
                     />
                 </Paper>
             </Grid>
-            <Grid item xs={9}>
+            <Grid item xs={9} >
                 <ProductList products={products} />
             </Grid>
             <Grid item xs={3} />

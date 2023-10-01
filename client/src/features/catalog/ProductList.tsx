@@ -11,7 +11,7 @@ interface Props {
 export default function ProductList({ products }: Props) {
     const { productsLoaded } = useAppSelector(state => state.catalog);
     return (
-        <Grid container spacing={4}>
+        <Grid container spacing={6}>
             {products.map((product) => (
                 <Grid item xs={4} key={product.id}>
                     {!productsLoaded ? (
