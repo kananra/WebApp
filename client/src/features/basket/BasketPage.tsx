@@ -9,13 +9,12 @@ export default function BasketPage() {
   const { basket } = useAppSelector(state => state.basket);
 
 
-  if (!basket) return <Typography variant="h3">Your basket is empty</Typography>
-  if (basket.items.length === 0) return <Typography variant="h3">Your basket is empty</Typography>
+  if (!basket) return <Typography variant="h3" textAlign={'center'} sx={{marginBottom:'200px',mt:5 }}>Your basket is empty</Typography>
+  if (basket.items.length === 0) return <Typography variant="h3" textAlign={'center'} sx={{marginBottom:'200px',mt:5 }}>Your basket is empty</Typography>
 
   return (
     <>
-    
-     <BasketTable items={basket.items}/>
+     <BasketTable items={basket.items} />
       <Grid container sx={{marginBottom:'200px' }}>
         <Grid item xs={6} />
         <Grid item xs={6}>
