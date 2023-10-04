@@ -15,7 +15,7 @@ export default function ProductCard({ product }: Props) {
     const dispatch=useAppDispatch();
     const cardStyle = {
         display: 'block',
-        width: '292px',
+        width: '100%',
         height: '390px',
         paddingTop:'15px'
     }
@@ -25,18 +25,19 @@ export default function ProductCard({ product }: Props) {
             <Card style={cardStyle}>
                 
                 <CardMedia
-                    sx={{ height: 160,backgroundSize:'contain' }}
+                    sx={{ width:'100%',height: 160,backgroundSize:'contain' }}
                     image={product.pictureUrl}
                     title={product.name}
                 />
                 <CardHeader
                     title={product.name}
                     titleTypographyProps={{
-                        sx:{color:'inherit',fontSize:'15px'}
-                    }}
+                        sx:{color:'inherit',fontSize:'15px'}} 
+                    }
+                    
                 />
                 <CardContent>
-                    <Typography gutterBottom color='inherit' variant="h5">
+                    <Typography gutterBottom color='inherit' variant="h6" >
                         {currencyFormat(product.price)} 
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
