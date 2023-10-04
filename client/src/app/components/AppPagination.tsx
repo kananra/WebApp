@@ -27,7 +27,7 @@ export default function AppPagination({ metaData, onPageChange }: Props) {
             </Typography>
             <Pagination
                 color="primary"
-                size="large"
+                size="small"
                 count={totalPages}
                 page={pageNumber}
                 onChange={(e,page)=>handlePageChange(page)}
