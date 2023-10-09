@@ -46,6 +46,7 @@ export default function RecentStories() {
             component={Link}
             to="https://rog.asus.com/articles/hands-on/hands-on-the-rog-raikiri-pro-took-my-couch-gaming-to-the-next-level/"
             sx={{ overflow: "hidden", height: 550 }}
+            display={{xs:'flex',sm:'none',md:'flex'}}
           >
             <img src="/images/stories3.webp" alt="" className="cardZoom cardStoriesTop" />
           </Grid>
@@ -54,7 +55,7 @@ export default function RecentStories() {
           container
           spacing={2}
           sx={{ px: 4, maxWidth: "100%" }}
-          columns={{ xs: 4, sm: 8, md: 12 }}
+          columns={{ xs: 4, sm: 12 }}
         >
           <Grid
             item

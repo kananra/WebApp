@@ -119,7 +119,7 @@ export default function Header({ darkMode, handleThemeChange }: Props) {
             variant="h6"
             component={NavLink}
             to="/"
-            sx={{ display: { xs: "none", md: "flex"}, mr: 1 }}
+            sx={{ display: { xs: "none", sm: "flex"}, mr: 1 }}
           >
             <img src="/images/asusroglogo.png" alt="asus" style={{ width: "120px" }} />
           </Typography>

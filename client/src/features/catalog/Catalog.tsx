@@ -28,11 +28,13 @@ export default function Catalog() {
         container
         columnSpacing={3}
         rowSpacing={2}
-        direction={{xs:'column', sm:'row'}} 
-        sx={{ px: { xs: "10px", lg: "150px" }, mt: 8 }}
+        direction={{ xs: "column", sm: "row" }}
+        sx={{ px: "10px", mt: 8 }}
       >
         <Grid item xs={3}>
-          <Paper sx={{ mb: 2 }}>
+          <Paper
+            sx={{mb: 2}}
+          >
             <ProductSearch />
           </Paper>
           <Paper sx={{ mb: 2, p: 2 }}>
@@ -57,7 +59,7 @@ export default function Catalog() {
             />
           </Paper>
         </Grid>
-        <Grid item xs={8} lg={9}>
+        <Grid item xs={8} lg={9} >
           <ProductList products={products} />
         </Grid>
 

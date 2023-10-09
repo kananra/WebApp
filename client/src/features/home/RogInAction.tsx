@@ -93,14 +93,15 @@ export default function RogInAction() {
           component={NavLink}
           to="https://rog.asus.com/articles/gaming/the-best-rog-ally-games-to-play-in-short-bursts/"
           sx={{ textDecoration: "none",color:'inherit'  }}
+          display={{xs:'block',sm:'none',md:'block'}}
         >
-          <Card sx={{ maxWidth: 500 }}>
+          <Card sx={{ maxWidth: 500 }} >
             <CardActionArea>
               <CardMedia
                 component="img"
                 height="250"
                 image="/images/news3.webp"
-                alt="green iguana"
+                alt="retro game"
               />
             </CardActionArea>
           </Card>
