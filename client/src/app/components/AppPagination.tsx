@@ -18,7 +18,7 @@ export default function AppPagination({ metaData, onPageChange }: Props) {
     }
 
     return (
-        <Box display='flex' justifyContent='space-between' alignItems='center'>
+        <Box display='flex' justifyContent='space-between' alignItems='center' flexWrap={'wrap'}>
             <Typography>
                 Displaying {(currentPage - 1) * pageSize + 1}-
                 {currentPage * pageSize > totalCount 

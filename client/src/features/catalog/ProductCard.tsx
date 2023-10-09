@@ -27,6 +27,7 @@ export default function ProductCard({ product }: Props) {
     width: "100%",
     height: "390px",
     paddingTop: "15px",
+    boxShadow:'0 3px 10px rgb(0 11 237 / 0.3)'
   };
 
   

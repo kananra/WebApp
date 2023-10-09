@@ -8,7 +8,7 @@ function UncontrolledExample() {
   return (
     <>
       <Carousel fade>
-        <Carousel.Item>
+        <Carousel.Item interval={1000}>
           <img
             src="/images/fwebp.webp"
             alt="hero"

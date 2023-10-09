@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <Box sx={{ height: 500 }}>
+    <Box sx={{ height: 500,flexGrow: 1 }} >
       <Box
         sx={{
           backgroundImage: "url(/images/bgimg.jpeg)",
@@ -24,7 +24,7 @@ export default function Footer() {
       >
         <Grid container direction={{ xs: "column", md: "row" }} sx={{ p: 4 }}>
           <Grid item xs={6} container direction={{ xs: "column", md: "row" }} spacing={2}>
-            <Grid className="newsHover" item xs={3} sx={{ color: "white",textDecoration:'none' }} component={Link} to='https://rog.asus.com/about-rog/'>
+            <Grid className="newsHover" item xs={3} sx={{ color: "white",textDecoration:'none' }} component={Link} to='/about'>
               ABOUT ROG
             </Grid>
             <Grid className="newsHover" item xs={3} sx={{ color: "white",textDecoration:'none' }} component={Link} to='/'>
@@ -42,7 +42,7 @@ export default function Footer() {
             item
             xs={6}
             container
-            direction={{ md: "row" }}
+            direction={{ md: "row", }}
             sx={{
               display: "flex",
               justifyContent: "flex-end",
