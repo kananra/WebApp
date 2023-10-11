@@ -1,4 +1,4 @@
-import { TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody, Button, Typography } from "@mui/material";
+import { TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody, Button, Typography, Grid } from "@mui/material";
 import { useEffect, useState } from "react";
 import agent from "../../app/api/agent";
 import LoadingComponent from "../../app/layout/LoadingComponent";
@@ -28,7 +28,7 @@ export default function Orders() {
   )
 
   return (
-    <>
+    <Grid sx={{marginBottom:'100px'}}>
       <Typography sx={{ p: 2 }} gutterBottom variant="h4">Orders</Typography>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -61,7 +61,7 @@ export default function Orders() {
           </TableBody>
         </Table>
       </TableContainer>
-    </>
+    </Grid>
 
   )
 }
