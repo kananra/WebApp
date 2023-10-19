@@ -23,8 +23,8 @@ export default function PaymentForm({cardState,onCardInputChange}:Props) {
         <Grid item xs={12} md={6}>
           <AppTextInput name='nameOnCard' label='Name on card' control={control} />
         </Grid>
-        <Grid item xs={12} md={6} sx={{color:'white'}} >
-          <TextField sx={{color:'white'}}
+        <Grid item xs={12} md={6}  >
+          <TextField
             onChange={onCardInputChange}
             error={!!cardState.elementError.cardNumber}
             helperText={cardState.elementError.cardNumber}
