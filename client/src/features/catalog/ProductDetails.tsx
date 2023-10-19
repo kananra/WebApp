@@ -51,7 +51,7 @@ export default function ProductDetails() {
             <Grid item xs={6}>
                 <Typography variant="h3">{product.name}</Typography>
                 <Divider sx={{ mb: 2 }} />
-                <Typography variant="h4" color='secondary'>{(product.price / 100).toFixed(2)} Azn</Typography>
+                <Typography variant="h4" color='inherit'>{(product.price / 100).toFixed(2)} Azn</Typography>
                 <TableContainer>
                     <Table>
                         <TableBody>
@@ -94,7 +94,7 @@ export default function ProductDetails() {
                             loading={status.includes('pending')}
                             onClick={handleUpdateCart}
                             sx={{ height: '55px' }}
-                            color="primary"
+                            color="inherit"
                             size="large"
                             variant="contained"
                             fullWidth

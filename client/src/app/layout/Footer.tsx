@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <Box sx={{ height: 500,flexGrow: 1 }} >
+    <Box sx={{ height: 500,flexGrow: 1}} >
       <Box
         sx={{
           backgroundImage: "url(/images/bgimg.jpeg)",

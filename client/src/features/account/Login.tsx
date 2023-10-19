@@ -39,7 +39,7 @@ export default function Login() {
 
     return (
         <Container component={Paper} maxWidth="sm"
-            sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', p: 4,marginBottom:'100px' }}>
+            sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', p: 4,marginBottom:'100px',mt:4 }}>
             <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
                 <LockOutlinedIcon />
             </Avatar>
